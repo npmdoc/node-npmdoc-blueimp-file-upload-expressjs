@@ -1,0 +1,918 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/arvindr21/blueimp-file-upload-expressjs"
+
+    >blueimp-file-upload-expressjs (v0.4.4)</a>
+</h1>
+<h4>jQuery File Upload using Expressjs : 'borrowed' from Blueimp jQuery File Upload developed by Sebastian Tschan</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.blueimp-file-upload-expressjs">module blueimp-file-upload-expressjs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.blueimp-file-upload-expressjs">
+            function <span class="apidocSignatureSpan"></span>blueimp-file-upload-expressjs
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>fileinfo
+            <span class="apidocSignatureSpan">(file, opts, fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>configs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>fileinfo.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.blueimp-file-upload-expressjs.configs">module blueimp-file-upload-expressjs.configs</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>copyImgAsThumb</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>useSSL</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.configs.apply">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>apply
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.configs.specialApply">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>specialApply
+            <span class="apidocSignatureSpan">(key, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.configs.validate">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>validate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>maxFileSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>maxPostSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>minFileSize</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>UUIDRegex</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>acceptFileTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>accessControl</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>imageTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>imageVersions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>inlineFileTypes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>storage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>tmpDir</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>uploadDir</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>uploadUrl</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.blueimp-file-upload-expressjs.fileinfo">module blueimp-file-upload-expressjs.fileinfo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.fileinfo">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>fileinfo
+            <span class="apidocSignatureSpan">(file, opts, fields)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.getFileKey">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.</span>getFileKey
+            <span class="apidocSignatureSpan">(filePath)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.blueimp-file-upload-expressjs.fileinfo.prototype">module blueimp-file-upload-expressjs.fileinfo.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.hasVersionImages">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>hasVersionImages
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.initUrls">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>initUrls
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.safeName">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>safeName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.update">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>update
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.validate">
+            function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>validate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.blueimp-file-upload-expressjs" id="apidoc.module.blueimp-file-upload-expressjs">module blueimp-file-upload-expressjs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.blueimp-file-upload-expressjs" id="apidoc.element.blueimp-file-upload-expressjs.blueimp-file-upload-expressjs">
+        function <span class="apidocSignatureSpan"></span>blueimp-file-upload-expressjs
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function uploadService(opts) {
+    var options = configs.apply(opts);
+    var transporter = options.storage.type === &#x27;local&#x27; ? require(&#x27;./lib/transport/local.js&#x27;) : require(&#x27;./lib/transport/aws.js&#x27;);
+
+    transporter = transporter(options);
+
+    var fileUploader = {};
+
+    fileUploader.config = options;
+
+    function setNoCacheHeaders(res) {
+        res.setHeader(&#x27;Pragma&#x27;, &#x27;no-cache&#x27;);
+        res.setHeader(&#x27;Cache-Control&#x27;, &#x27;no-store, no-cache, must-revalidate&#x27;);
+        res.setHeader(&#x27;Content-Disposition&#x27;, &#x27;inline; filename=&#x22;files.json&#x22;&#x27;);
+    }
+
+    fileUploader.get = function(req, res, callback) {
+        this.config.host = req.headers.host;
+        setNoCacheHeaders(res);
+        transporter.get(callback);
+    };
+
+    fileUploader.post = function(req, res, callback) {
+        setNoCacheHeaders(res);
+        var form = new formidable.IncomingForm();
+        var tmpFiles = [];
+        var files = [];
+        var map = {};
+        var fields = {};
+        var redirect;
+
+        this.config.host = req.headers.host;
+
+        var configs = this.config;
+
+        req.body = req.body || {};
+
+        function finish(error, fileInfo) {
+
+            if (error) return callback(error, {
+                files: files
+            }, redirect);
+
+            if (!fileInfo) return callback(null, {
+                files: files
+            }, redirect);
+
+            var allFilesProccessed = true;
+
+            files.forEach(function(file, idx) {
+                allFilesProccessed = allFilesProccessed &#x26;&#x26; file.proccessed;
+            });
+
+            if (allFilesProccessed) {
+                callback(null, {
+                    files: files
+                }, redirect);
+            }
+        }
+
+        form.uploadDir = configs.tmpDir;
+
+        form.on(&#x27;fileBegin&#x27;, function(name, file) {
+            tmpFiles.push(file.path);
+            // fix #41
+            configs.saveFile = true;
+            var fileInfo = new FileInfo(file, configs, fields);
+            map[fileInfo.key] = fileInfo;
+            files.push(fileInfo);
+        }).on(&#x27;field&#x27;, function(name, value) {
+            fields[name] = value;
+            if (name === &#x27;redirect&#x27;) {
+                redirect = value;
+            }
+        }).on(&#x27;file&#x27;, function(name, file) {
+            var fileInfo = map[FileInfo.getFileKey(file.path)];
+            fileInfo.update(file);
+            if (!fileInfo.validate()) {
+                finish(fileInfo.error);
+                fs.unlink(file.path);
+                return;
+            }
+
+            transporter.post(fileInfo, file, finish);
+
+        }).on(&#x27;aborted&#x27;, function() {
+            finish(&#x27;aborted&#x27;);
+            tmpFiles.forEach(function(file) {
+                fs.unlink(file);
+            });
+        }).on(&#x27;error&#x27;, function(e) {
+            console.log(&#x27;form.error&#x27;, e);
+            finish(e);
+        }).on(&#x27;progress&#x27;, function(bytesReceived) {
+            if (bytesReceived &#x3e; configs.maxPostSize) {
+                req.connection.destroy();
+            }
+        }).on(&#x27;end&#x27;, function() {
+            //if (configs.storage.type == &#x27;local&#x27;) {
+            //    finish();
+            //}
+        }).parse(req);
+    };
+
+    fileUploader.delete = function(req, res, callback) {
+        transporter.delete(req, res, callback);
+    };
+
+    return fileUploader;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>fileinfo
+        <span class="apidocSignatureSpan">(file, opts, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileInfo(file, opts, fields) {
+    this.name = file.name;
+    this.size = file.size;
+    this.type = file.type;
+    this.modified = file.lastMod;
+    this.deleteType = &#x27;DELETE&#x27;;
+    this.options = opts;
+    this.key = getFileKey(file.path);
+    this.versions = {};
+    this.proccessed = false;
+    this.width = udf;
+    this.height = udf;
+    this.fields = fields;
+    if (opts.saveFile) {
+        this.safeName();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.blueimp-file-upload-expressjs.configs" id="apidoc.module.blueimp-file-upload-expressjs.configs">module blueimp-file-upload-expressjs.configs</a></h1>
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.configs.apply" id="apidoc.element.blueimp-file-upload-expressjs.configs.apply">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>apply
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (opts){
+
+    opts = opts || {};
+
+    for(var c in opts ){
+        if( this.specialApply(c,opts[c]) ) continue;
+        this[c] = opts[c];
+    }
+
+    this.validate();
+
+    return this;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var formidable = require(&#x27;formidable&#x27;);
+var fs = require(&#x27;fs&#x27;);
+var path = require(&#x27;path&#x27;);
+
+module.exports = uploadService;
+
+function uploadService(opts) {
+var options = configs.<span class="apidocCodeKeywordSpan">apply</span>(opts);
+var transporter = options.storage.type === &#x27;local&#x27; ? require(&#x27;./lib/transport/local.js&#x27;) : require(&#x27;./lib
+/transport/aws.js&#x27;);
+
+transporter = transporter(options);
+
+var fileUploader = {};
+
+fileUploader.config = options;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.configs.specialApply" id="apidoc.element.blueimp-file-upload-expressjs.configs.specialApply">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>specialApply
+        <span class="apidocSignatureSpan">(key, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">specialApply = function (key, opt){
+    //special properties that cann&#x27;t apply simple copy
+    var specialProperties = {
+        &#x27;imageVersions&#x27;:true,
+        &#x27;accessControl&#x27;:true,
+        &#x27;storage&#x27;:true
+    };
+
+    if(!specialProperties[key]) return false;
+
+    switch(key){
+        case &#x27;imageVersions&#x27;:
+            this.imageVersions.thumbnail.width = opt.maxWidth || this.imageVersions.thumbnail.width;
+            this.imageVersions.thumbnail.height = opt.maxHeight || this.imageVersions.thumbnail.height;
+            Object.keys(opt).forEach(function(version) {
+                if (version != &#x27;maxHeight&#x27; &#x26;&#x26; version != &#x27;maxWidth&#x27;) {
+                    options.imageVersions[version] = opt[version];
+                }
+            });
+
+        break;
+
+        case &#x27;accessControl&#x27;:
+            for(var c in opt){
+                this.accessControl[c] = opt[c];
+            }
+        break;
+
+        case &#x27;storage&#x27;:
+            this.storage.type = opt.type || this.storage.type;
+            if(opt.aws){
+                for(var c1 in opt.aws){
+                    this.storage.aws[c1] = opt.aws[c1];
+                }
+            }
+
+        break;
+
+    }//switch
+
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+     * apply custom options to the default options
+     */
+    apply:function(opts){
+
+opts = opts || {};
+
+for(var c in opts ){
+    if( this.<span class="apidocCodeKeywordSpan">specialApply</span>(c,opts[c]) ) continue;
+    this[c] = opts[c];
+}
+
+this.validate();
+
+return this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.configs.validate" id="apidoc.element.blueimp-file-upload-expressjs.configs.validate">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.configs.</span>validate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function (){
+    if ( this.storage.type === &#x27;local&#x27; ) {
+        checkExists(options.tmpDir);
+        checkExists(options.uploadDir);
+        if (options.copyImgAsThumb) {
+            Object.keys(options.imageVersions).forEach(function(version) {
+                checkExists(options.uploadDir + &#x27;/&#x27; + version);
+            });
+        }
+    }
+
+    if( this.storage.type === &#x27;aws&#x27;) {
+
+        if (!this.storage.aws.accessKeyId || !this.storage.aws.secretAccessKey || !this.storage.aws.bucketName) {
+            throw new Error(&#x27;Please enter valid AWS S3 details&#x27;);
+        }
+    }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+fields[name] = value;
+if (name === &#x27;redirect&#x27;) {
+    redirect = value;
+}
+        }).on(&#x27;file&#x27;, function(name, file) {
+var fileInfo = map[FileInfo.getFileKey(file.path)];
+fileInfo.update(file);
+if (!fileInfo.<span class="apidocCodeKeywordSpan">validate</span>()) {
+    finish(fileInfo.error);
+    fs.unlink(file.path);
+    return;
+}
+
+transporter.post(fileInfo, file, finish);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.blueimp-file-upload-expressjs.fileinfo" id="apidoc.module.blueimp-file-upload-expressjs.fileinfo">module blueimp-file-upload-expressjs.fileinfo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.fileinfo" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.fileinfo">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.</span>fileinfo
+        <span class="apidocSignatureSpan">(file, opts, fields)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function FileInfo(file, opts, fields) {
+    this.name = file.name;
+    this.size = file.size;
+    this.type = file.type;
+    this.modified = file.lastMod;
+    this.deleteType = &#x27;DELETE&#x27;;
+    this.options = opts;
+    this.key = getFileKey(file.path);
+    this.versions = {};
+    this.proccessed = false;
+    this.width = udf;
+    this.height = udf;
+    this.fields = fields;
+    if (opts.saveFile) {
+        this.safeName();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.getFileKey" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.getFileKey">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.</span>getFileKey
+        <span class="apidocSignatureSpan">(filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFileKey = function (filePath) {
+
+    return path.basename(filePath);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    files.push(fileInfo);
+}).on(&#x27;field&#x27;, function(name, value) {
+    fields[name] = value;
+    if (name === &#x27;redirect&#x27;) {
+        redirect = value;
+    }
+}).on(&#x27;file&#x27;, function(name, file) {
+    var fileInfo = map[FileInfo.<span class="apidocCodeKeywordSpan">getFileKey</span>(file.path)];
+    fileInfo.update(file);
+    if (!fileInfo.validate()) {
+        finish(fileInfo.error);
+        fs.unlink(file.path);
+        return;
+    }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.blueimp-file-upload-expressjs.fileinfo.prototype" id="apidoc.module.blueimp-file-upload-expressjs.fileinfo.prototype">module blueimp-file-upload-expressjs.fileinfo.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.hasVersionImages" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.hasVersionImages">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>hasVersionImages
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasVersionImages = function () {
+    return (this.options.copyImgAsThumb &#x26;&#x26; this.options.imageTypes.test(this.url));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var that = this;
+var baseUrl = (that.options.useSSL ? &#x27;https:&#x27; : &#x27;http:&#x27;) + &#x27;//&#x27; + that.options.host + that.options
+.uploadUrl;
+if (this.error) return;
+if (!this.awsFile) {
+    that.url = baseUrl + encodeURIComponent(that.name);
+    that.deleteUrl = baseUrl + encodeURIComponent(that.name);
+    if (!that.<span class="apidocCodeKeywordSpan">hasVersionImages</span>()) return;
+    Object.keys(that.options.imageVersions).forEach(function(version) {
+        if (_existsSync(that.options.uploadDir + &#x27;/&#x27; + version + &#x27;/&#x27; + that.name)) {
+            that[version + &#x27;Url&#x27;] = baseUrl + version + &#x27;/&#x27; + encodeURIComponent(that.name);
+        } else {
+            // create version failed, use the default url as version url
+            that[version + &#x27;Url&#x27;] = that.url;
+        }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.initUrls" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.initUrls">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>initUrls
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">initUrls = function () {
+
+    var that = this;
+    var baseUrl = (that.options.useSSL ? &#x27;https:&#x27; : &#x27;http:&#x27;) + &#x27;//&#x27; + that.options.host + that.options.uploadUrl;
+    if (this.error) return;
+    if (!this.awsFile) {
+        that.url = baseUrl + encodeURIComponent(that.name);
+        that.deleteUrl = baseUrl + encodeURIComponent(that.name);
+        if (!that.hasVersionImages()) return;
+        Object.keys(that.options.imageVersions).forEach(function(version) {
+            if (_existsSync(that.options.uploadDir + &#x27;/&#x27; + version + &#x27;/&#x27; + that.name)) {
+                that[version + &#x27;Url&#x27;] = baseUrl + version + &#x27;/&#x27; + encodeURIComponent(that.name);
+            } else {
+                // create version failed, use the default url as version url
+                that[version + &#x27;Url&#x27;] = that.url;
+            }
+        });
+        return;
+    }
+
+    that.url = that.awsFile.url;
+    that.deleteUrl = that.options.uploadUrl + that.url.split(&#x27;/&#x27;)[that.url.split(&#x27;/&#x27;).length - 1].split(&#x27;?&#x27;)[0];
+    if (!that.hasVersionImages()) return;
+    Object.keys(that.options.imageVersions).forEach(function(version) {
+        that[version + &#x27;Url&#x27;] = that.url;
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                url: (options.useSSL ? &#x27;https:&#x27; : &#x27;http:&#x27;) + &#x27;//s3.amazonaws.com/&#x27; + configs.bucketName
+ + &#x27;/&#x27; + o.Key
+            };
+            var fileInfo = new FileInfo({
+                name: options.UUIDRegex.test(o.Key) ? o.Key.split(&#x27;__&#x27;)[1] : o.Key,
+                size: o.Size,
+                awsFile:sss
+            }, options);
+            fileInfo.<span class="apidocCodeKeywordSpan">initUrls</span>();
+            files.push(fileInfo);
+
+        });
+        callback(null,{files: files});
+    });
+},
+post:function(fileInfo,file,finish){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.safeName" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.safeName">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>safeName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">safeName = function () {
+    var nameCountRegexp = /(?:(?: \(([\d]+)\))?(\.[^.]+))?$/;
+
+    function nameCountFunc(s, index, ext) {
+        return &#x27; (&#x27; + ((parseInt(index, 10) || 0) + 1) + &#x27;)&#x27; + (ext || &#x27;&#x27;);
+    }
+
+    // Prevent directory traversal and creating hidden system files:
+    this.name = path.basename(this.name).replace(/^\.+/, &#x27;&#x27;);
+    // Prevent overwriting existing files:
+    while (_existsSync(this.options.uploadDir + &#x27;/&#x27; + this.name)) {
+        this.name = this.name.replace(nameCountRegexp, nameCountFunc);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.key = getFileKey(file.path);
+this.versions = {};
+this.proccessed = false;
+this.width = udf;
+this.height = udf;
+this.fields = fields;
+if (opts.saveFile) {
+    this.<span class="apidocCodeKeywordSpan">safeName</span>();
+}
+}
+FileInfo.prototype.update = function(file) {
+this.size = file.size;
+};
+FileInfo.prototype.safeName = function() {
+var nameCountRegexp = /(?:(?: \(([\d]+)\))?(\.[^.]+))?$/;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.update" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.update">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>update
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (file) {
+    this.size = file.size;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }).on(&#x27;field&#x27;, function(name, value) {
+fields[name] = value;
+if (name === &#x27;redirect&#x27;) {
+    redirect = value;
+}
+        }).on(&#x27;file&#x27;, function(name, file) {
+var fileInfo = map[FileInfo.getFileKey(file.path)];
+fileInfo.<span class="apidocCodeKeywordSpan">update</span>(file);
+if (!fileInfo.validate()) {
+    finish(fileInfo.error);
+    fs.unlink(file.path);
+    return;
+}
+
+transporter.post(fileInfo, file, finish);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.validate" id="apidoc.element.blueimp-file-upload-expressjs.fileinfo.prototype.validate">
+        function <span class="apidocSignatureSpan">blueimp-file-upload-expressjs.fileinfo.prototype.</span>validate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">validate = function () {
+    if (this.options.minFileSize &#x26;&#x26; this.options.minFileSize &#x3e; this.size) {
+        this.error = &#x27;File is too small&#x27;;
+    } else if (this.options.maxFileSize &#x26;&#x26; this.options.maxFileSize &#x3c; this.size) {
+        this.error = &#x27;File is too big&#x27;;
+    } else if (!this.options.acceptFileTypes.test(this.name)) {
+        this.error = &#x27;Filetype not allowed&#x27;;
+    }
+    return !this.error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+fields[name] = value;
+if (name === &#x27;redirect&#x27;) {
+    redirect = value;
+}
+        }).on(&#x27;file&#x27;, function(name, file) {
+var fileInfo = map[FileInfo.getFileKey(file.path)];
+fileInfo.update(file);
+if (!fileInfo.<span class="apidocCodeKeywordSpan">validate</span>()) {
+    finish(fileInfo.error);
+    fs.unlink(file.path);
+    return;
+}
+
+transporter.post(fileInfo, file, finish);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
